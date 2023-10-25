@@ -7,9 +7,12 @@ import {
 import Register from "./Authorization/Register";
 import Login from "./Authorization/Login";
 import Home from "./components/Home";
+import { useContext } from "react";
+import { AuthContext } from "./Authorization/AuthContext";
 
 function App() {
-  const currentUser = false;
+  const { currentUser } = useContext(AuthContext);
+
   const RequireAuth = ({ children }) => {
     return currentUser ? children : <Navigate to="/login" />;
   };
