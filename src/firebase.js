@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_KEY,
+  apiKey: "AIzaSyAtwIsYTaeY8H47-IfTzAAButvVwGwHy1I",
   authDomain: "intelligent-fleet-management.firebaseapp.com",
   projectId: "intelligent-fleet-management",
   storageBucket: "intelligent-fleet-management.appspot.com",
@@ -11,4 +11,4 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth;
+export const auth = getAuth(app);
